@@ -14,103 +14,104 @@ namespace BABurgessWebApp.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: FinancialTrading
+        // GET: Financials
         public ActionResult Index()
         {
-            return View(db.FinancialTradingModels.ToList());
+            return View(db.Financial.ToList());
         }
 
-        // GET: FinancialTrading/Details/5
-        public ActionResult Details(int? id)
+        // GET: Financials/Details/5
+        public ActionResult Details(Guid? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FinancialTradingModels financialTradingModels = db.FinancialTradingModels.Find(id);
-            if (financialTradingModels == null)
+            Financial financial = db.Financial.Find(id);
+            if (financial == null)
             {
                 return HttpNotFound();
             }
-            return View(financialTradingModels);
+            return View(financial);
         }
 
-        // GET: FinancialTrading/Create
+        // GET: Financials/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: FinancialTrading/Create
+        // POST: Financials/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Symbol")] FinancialTradingModels financialTradingModels)
+        public ActionResult Create([Bind(Include = "Id,Symbol,Name,Shares,Price,TOTAL")] Financial financial)
         {
             if (ModelState.IsValid)
             {
-                db.FinancialTradingModels.Add(financialTradingModels);
+                financial.Id = Guid.NewGuid();
+                db.Financial.Add(financial);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(financialTradingModels);
+            return View(financial);
         }
 
-        // GET: FinancialTrading/Edit/5
-        public ActionResult Edit(int? id)
+        // GET: Financials/Edit/5
+        public ActionResult Edit(Guid? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FinancialTradingModels financialTradingModels = db.FinancialTradingModels.Find(id);
-            if (financialTradingModels == null)
+            Financial financial = db.Financial.Find(id);
+            if (financial == null)
             {
                 return HttpNotFound();
             }
-            return View(financialTradingModels);
+            return View(financial);
         }
 
-        // POST: FinancialTrading/Edit/5
+        // POST: Financials/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Symbol")] FinancialTradingModels financialTradingModels)
+        public ActionResult Edit([Bind(Include = "Id,Symbol,Name,Shares,Price,TOTAL")] Financial financial)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(financialTradingModels).State = EntityState.Modified;
+                db.Entry(financial).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(financialTradingModels);
+            return View(financial);
         }
 
-        // GET: FinancialTrading/Delete/5
-        public ActionResult Delete(int? id)
+        // GET: Financials/Delete/5
+        public ActionResult Delete(Guid? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FinancialTradingModels financialTradingModels = db.FinancialTradingModels.Find(id);
-            if (financialTradingModels == null)
+            Financial financial = db.Financial.Find(id);
+            if (financial == null)
             {
                 return HttpNotFound();
             }
-            return View(financialTradingModels);
+            return View(financial);
         }
 
-        // POST: FinancialTrading/Delete/5
+        // POST: Financials/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(Guid id)
         {
-            FinancialTradingModels financialTradingModels = db.FinancialTradingModels.Find(id);
-            db.FinancialTradingModels.Remove(financialTradingModels);
+            Financial financial = db.Financial.Find(id);
+            db.Financial.Remove(financial);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

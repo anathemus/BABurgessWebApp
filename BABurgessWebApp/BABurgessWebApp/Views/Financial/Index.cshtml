@@ -1,7 +1,7 @@
-﻿@model IEnumerable<BABurgessWebApp.Models.FinancialTradingModels>
+﻿@model IEnumerable<BABurgessWebApp.Models.Financial>
 
 @{
-    ViewBag.Title = "Financial Trading";
+    ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
@@ -14,6 +14,18 @@
         <th>
             @Html.DisplayNameFor(model => model.Symbol)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shares)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TOTAL)
+        </th>
         <th></th>
     </tr>
 
@@ -21,6 +33,18 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Symbol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shares)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TOTAL)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
