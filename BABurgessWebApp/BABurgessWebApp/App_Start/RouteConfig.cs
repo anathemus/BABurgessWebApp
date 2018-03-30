@@ -18,6 +18,12 @@ namespace BABurgessWebApp
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Financial",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Financial", action = "Index", id = UrlParameter.Optional }
+                );
         }
     }
 }

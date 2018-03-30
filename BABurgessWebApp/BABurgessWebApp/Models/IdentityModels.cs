@@ -29,5 +29,7 @@ namespace BABurgessWebApp.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BABurgessWebApp.Models.FinancialTradingModels> FinancialTradingModels { get; set; }
     }
 }
