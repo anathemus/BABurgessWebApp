@@ -15,17 +15,17 @@
     <div class="row">
         <div class="col-md-12">
             <ul class="nav nav-pills">
-                <li><a href="#PutItDown">Put It Down</a></li>
-                <li><a href="#CS50Finance">CS50 Finance</a></li>
-                <li><a href="#Mashup">Mashup</a></li>
+                <li class="nav-item"><a href="#PutItDown" class="nav-link">Put It Down</a></li>
+                <li class="nav-item"><a href="#CS50Finance" class="nav-link">CS50 Finance</a></li>
+                <li class="nav-item"><a href="#Mashup" class="nav-link disabled">Mashup</a></li>
             </ul>
         </div>
     </div>
-    <div class="row">
+    <div class="row"><a id="PutItDown"></a>
         <div class="col-xs-3 col-md-5">
         </div>
         <div class="col-xs-6 col-md-2">
-            <img src="~/Content/Photos/PID.png" class="img-rounded img-responsive" />
+            <img src="~/Content/Photos/PID.png" class="img-rounded img-fluid" />
         </div>
         <div class="col-xs-3 col-md-2">
         </div>
@@ -34,7 +34,7 @@
         <div class="col-md-2">
         </div>
         <div class="col-md-8">
-            <a name="PutItDown"><br /></a>
+            <a><br /></a>
             <h2 class="title">Put It Down</h2>
             <blockquote>
                 <p>
@@ -74,11 +74,11 @@
         <div class="col-xs-6 col-md-2">
             <a href="https://appsto.re/us/ItP-_.i">
                 <img src="~/Content/Photos/Download_on_the_App_Store_Badge_US-UK_135x40.svg"
-                     class="img-responsive" />
+                     class="img-fluid" />
             </a><br />
             <a href="https://github.com/anathemus/FinalProject/tree/master/Put%20It%20Down%202.0/Put%20It%20Down/Put%20It%20Down"
                target="_blank">
-                <img src="~/Content/Photos/github.png" class="img-responsive github"
+                <img src="~/Content/Photos/github.png" class="img-fluid github"
                      id="github1" onmouseover="colorBorder(1);" onmouseout="clearBorder(1)" />
             </a>
             <br />
@@ -88,53 +88,53 @@
         <div class="col-xs-3 col-md-5">
         </div>
     </div>
-    <div class="row inverse">
-        <div class="col-xs-1 col-md-4">
-            <ul class="nav nav-pills">
-                <li><a href="#top">to top</a></li>
-            </ul>
+        <<div class="row inverse"><a id="CS50Finance"></a>
+            <div class="col-xs-1 col-md-4">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#top" class="nav-link">to top</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-10 col-md-4">
+                <br />
+                <img src="~/Content/Photos/nyse.JPG" class="img-fluid" />
+                <br />
+            </div>
+            <div class="col-xs-1 col-md-4">
+            </div>
         </div>
-        <div class="col-xs-10 col-md-4">
-            <br />
-            <img src="~/Content/Photos/nyse.JPG" class="img-responsive" />
-            <br />
+        <div class="row inverse">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <h2 class="title">CS50 Finance</h2>
+                <br />
+                <p>
+                    This is CS50 Finance! A web based tool with which a user can create
+                    a user account, look up stock quotes with realtime data from Yahoo!
+                    Finance, "buy" and "sell" stocks, create a portfolio they can check
+                    back in on at any time. It's reminiscent of the grade-school stock
+                    market game (and still fun).
+                </p>
+                <br />
+            </div>
+            <div class="col-md-2">
+            </div>
         </div>
-        <div class="col-xs-1 col-md-4">
+        <div class="row inverse">
+            <div class="col-xs-3 col-md-5">
+            </div>
+            <div class="col-xs-6 col-md-2">
+                @Html.ActionLink("Enter CS50 Finance Here", "Index", "Financial", null, new { @class = "btn btn-primary" })
+                <br />
+                <br />
+                <a href="https://github.com/anathemus/CS50/tree/master/pset7"
+                   target="_blank">
+                    <img src="~/Content/Photos/github.png" class="img-fluid github"
+                         id="github2" onmouseover="colorBorder(2);" onmouseout="clearBorder(2)" />
+                </a>
+                <br />
+                <br />
+                <br />
+            </div>
         </div>
-    </div>
-    <div class="row inverse">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-8">
-            <h2 class="title">CS50 Finance</h2>
-            <a name="CS50Finance"><br /></a>
-            <p>
-                This is CS50 Finance! A web based tool with which a user can create
-                a user account, look up stock quotes with realtime data from Yahoo!
-                Finance, "buy" and "sell" stocks, create a portfolio they can check
-                back in on at any time. It's reminiscent of the grade-school stock
-                market game (and still fun).
-            </p>
-            <br />
-        </div>
-        <div class="col-md-2">
-        </div>
-    </div>
-    <div class="row inverse">
-        <div class="col-xs-3 col-md-5">
-        </div>
-        <div class="col-xs-6 col-md-2">
-            <a href="" class="btn btn-primary">Enter CS50Finance Here</a>
-            <br />
-            <br />
-            <a href="https://github.com/anathemus/CS50/tree/master/pset7"
-               target="_blank">
-                <img src="~/Content/Photos/github.png" class="img-responsive github"
-                     id="github2" onmouseover="colorBorder(2);" onmouseout="clearBorder(2)" />
-            </a>
-            <br />
-            <br />
-            <br />
-        </div>
-    </div>
 </div>

@@ -9,12 +9,13 @@
     @{ 
         String context = ViewContext.RouteData.Values["Action"].ToString();
     }
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
         <div class="container">
             @Html.ActionLink("Benjamin Burgess", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button type="button" class="navbar-toggle btn-dark" data-toggle="collapse" data-target="#mainNavBar">
+            <button type="button" class="navbar-toggler hidden-md-up btn-dark" data-toggle="collapse" data-target="#mainNavBar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="mainNavBar" class="collapse navbar-collapse">
@@ -26,8 +27,8 @@
                             Projects
                         </a>
                         <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
-                            @Html.ActionLink("Put It Down", "Projects", "Home", null, new { @class = "dropdown-item" })
-                            @Html.ActionLink("c$50 Finance", "Projects", "Home", null, new { @class = "dropdown-item" })
+                            @Html.ActionLink("Put It Down", "Projects", "Home", new { id = "PutItDown" }, new { @class = "dropdown-item" })
+                            @Html.ActionLink("c$50 Finance", "Projects", "Home", new { id = "CS50Finance" }, new { @class = "dropdown-item" })
                         </div>
                     </li>
                     <li class="nav-item @(context == "Education" ? "active" : "")">@Html.ActionLink("Education", "Education", "Home", null, new { @class = "nav-link" })</li>
