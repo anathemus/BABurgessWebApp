@@ -14,13 +14,13 @@ namespace BABurgessWebApp.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Financials
+        // GET: Financial
         public ActionResult Index()
         {
             return View(db.Financial.ToList());
         }
 
-        // GET: Financials/Details/5
+        // GET: Financial/Details/5
         public ActionResult Details(Guid? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace BABurgessWebApp.Controllers
             return View(financial);
         }
 
-        // GET: Financials/Create
+        // GET: Financial/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Financials/Create
+        // POST: Financial/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,7 +59,7 @@ namespace BABurgessWebApp.Controllers
             return View(financial);
         }
 
-        // GET: Financials/Edit/5
+        // GET: Financial/Edit/5
         public ActionResult Edit(Guid? id)
         {
             if (id == null)
@@ -74,7 +74,7 @@ namespace BABurgessWebApp.Controllers
             return View(financial);
         }
 
-        // POST: Financials/Edit/5
+        // POST: Financial/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,7 +90,7 @@ namespace BABurgessWebApp.Controllers
             return View(financial);
         }
 
-        // GET: Financials/Delete/5
+        // GET: Financial/Delete/5
         public ActionResult Delete(Guid? id)
         {
             if (id == null)
@@ -105,7 +105,7 @@ namespace BABurgessWebApp.Controllers
             return View(financial);
         }
 
-        // POST: Financials/Delete/5
+        // POST: Financial/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(Guid id)

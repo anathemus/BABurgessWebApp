@@ -11,28 +11,32 @@
     }
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Benjamin Burgess", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="@(context == "Index" ? "active" : "")">@Html.ActionLink("Bio", "Index", "Home")</li>
-                    <li class="@(context == "Skills" ? "active" : "")">@Html.ActionLink("Skills", "Skills", "Home")</li>
-                    <li class="@(context == "Projects" ? "active" : "")">@Html.ActionLink("Projects", "Projects", "Home")</li>
-                    <li class="@(context == "Education" ? "active" : "")">@Html.ActionLink("Education", "Education", "Home")</li>
-                    <li class="@(context == "Feedback" ? "active" : "")">@Html.ActionLink("Feedback", "Feedback", "Home")</li>
+            @Html.ActionLink("Benjamin Burgess", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggle btn-dark" data-toggle="collapse" data-target="#mainNavBar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="mainNavBar" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item @(context == "Index" ? "active" : "")">@Html.ActionLink("Bio", "Index", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item @(context == "Skills" ? "active" : "")">@Html.ActionLink("Skills", "Skills", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item dropdown @(context == "Projects" ? "active" : "")">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Projects
+                        </a>
+                        <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
+                            @Html.ActionLink("Put It Down", "Projects", "Home", null, new { @class = "dropdown-item" })
+                            @Html.ActionLink("c$50 Finance", "Projects", "Home", null, new { @class = "dropdown-item" })
+                        </div>
+                    </li>
+                    <li class="nav-item @(context == "Education" ? "active" : "")">@Html.ActionLink("Education", "Education", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item @(context == "Feedback" ? "active" : "")">@Html.ActionLink("Feedback", "Feedback", "Home", null, new { @class = "nav-link" })</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
-    </div>
+    </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
