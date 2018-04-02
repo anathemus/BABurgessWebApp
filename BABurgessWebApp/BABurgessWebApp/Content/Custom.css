@@ -8,7 +8,99 @@
     src: url('../webfonts/Benguiat-Bold.ttf');
 }
 
+@font-face
+{
+    font-family: 'Gotham';
+    src: url('../webfonts/Gotham/gotham-black.otf');
+}
+
+@font-face
+{
+    font-family: 'Gotham';
+    src: url('../webfonts/Gotham/gotham-bold.otf');
+    src: url('../webfonts/Gotham/gothambold.ttf');
+    font-weight: bold;
+}
+
+@font-face
+{
+    font-family: 'Gotham';
+    src: url('../webfonts/Gotham/gothambolditalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face
+{
+    font-family: 'Gotham-Book';
+    src: url('../webfonts/Gotham/gothambook.ttf');
+}
+
+@font-face
+{
+    font-family: 'Gotham-Book';
+    src: url('../webfonts/Gotham/gotham-bookitalic.otf');
+    src: url('../webfonts/Gotham/gothambookitalic.ttf');
+    font-style: italic;
+}
+
+@font-face
+{
+    font-family: 'Gotham-Light';
+    src: url('../webfonts/Gotham/gotham-light.otf');
+    src: url('../webfonts/Gotham/gothamlight.ttf');
+}
+
+@font-face
+{
+    font-family: 'Gotham-Light';
+    src: url('../webfonts/Gotham/gothamlightitalic.ttf');
+    font-style: italic;
+}
+
+@font-face
+{
+    font-family: 'Gotham-Medium';
+    src: url('../webfonts/Gotham/gothammedium.ttf');
+}
+
+@font-face
+{
+    font-family: 'Gotham-Medium';
+    src: url('../webfonts/Gotham/gothammediumitalic.ttf');
+    font-style: italic;
+}
+
+@font-face
+{
+    font-family: 'Gotham-Ultra-Italic';
+    src: url('../webfonts/Gotham/gotham-ultraitalic.otf');
+}
+
+@font-face
+{
+    font-family: 'Gotham-XLight';
+    src: url('../webfonts/Gotham/gotham-xlight.otf');
+}
+
+@font-face
+{
+    font-family: 'Gotham-XLight';
+    src: url('../webfonts/Gotham/gotham-xlightitalic.otf');
+    font-style: italic;
+}
+
 .pill-btn
 {
     margin-right: 2%;
+}
+
+.header-bold
+{
+    font-family: Gotham-Ultra-Italic, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bio-p
+{
+    font-family: Gotham-Book, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
