@@ -1,0 +1,14 @@
+﻿.brand
+{
+    font-family: 'Benguiat Bold', 'MS Gothic', 'Franklin Gothic';
+}
+@font-face
+{
+    font-family: 'Benguiat Bold';
+    src: url('../webfonts/Benguiat-Bold.ttf');
+}
+
+.pill-btn
+{
+    margin-right: 2%;
+}

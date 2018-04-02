@@ -237,6 +237,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Custom.css" />
     <Content Include="Content\fa-brands.css" />
     <Content Include="Content\fa-brands.min.css" />
     <Content Include="Content\fa-regular.css" />
@@ -267,6 +268,11 @@
     <Content Include="Content\Photos\LaunchCode_Logo.png" />
     <Content Include="Content\Photos\logo.gif" />
     <Content Include="Content\Photos\logo.png" />
+    <Content Include="Content\Photos\MSBadges\exam-473.png" />
+    <Content Include="Content\Photos\MSBadges\exam-480.png" />
+    <Content Include="Content\Photos\MSBadges\exam-487.png" />
+    <Content Include="Content\Photos\MSBadges\exam-761.png" />
+    <Content Include="Content\Photos\MSBadges\exam-762.png" />
     <Content Include="Content\Photos\MSLogos\MCSASQL2016-logo-Wht.png" />
     <Content Include="Content\Photos\MSLogos\MCSEDMA-logo-Wht.png" />
     <Content Include="Content\Photos\New-Hampshire-Flag-US-State-Wood-XL.jpg" />

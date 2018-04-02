@@ -238,3 +238,8 @@ fieldset > div > label
 {
     width: 400px;
 }
+
+.padded-btn
+{
+    padding-top: 5px;
+}

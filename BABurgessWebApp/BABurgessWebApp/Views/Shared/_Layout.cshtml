@@ -10,11 +10,12 @@
         String context = ViewContext.RouteData.Values["Action"].ToString();
     }
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/Content/Custom.css" />
 </head>
 <body>
     <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
         <div class="container">
-            @Html.ActionLink("Benjamin Burgess", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Benjamin Burgess", "Index", "Home", new { area = "" }, new { @class = "navbar-brand brand" })
             <button type="button" class="navbar-toggler hidden-md-up btn-dark" data-toggle="collapse" data-target="#mainNavBar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,13 +28,14 @@
                             Projects
                         </a>
                         <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdownMenuLink">
-                            @Html.ActionLink("Put It Down", "Projects", "Home", new { id = "PutItDown" }, new { @class = "dropdown-item" })
-                            @Html.ActionLink("c$50 Finance", "Projects", "Home", new { id = "CS50Finance" }, new { @class = "dropdown-item" })
+                            @Html.ActionLink("Put It Down", "Projects", "Home", null, null, "PutItDown", null, new { @class = "dropdown-item" })
+                            @Html.ActionLink("c$50 Finance", "Projects", "Home", null, null, "CS50Finance", null, new { @class = "dropdown-item" })
                         </div>
                     </li>
                     <li class="nav-item @(context == "Education" ? "active" : "")">@Html.ActionLink("Education", "Education", "Home", null, new { @class = "nav-link" })</li>
                     <li class="nav-item @(context == "Feedback" ? "active" : "")">@Html.ActionLink("Feedback", "Feedback", "Home", null, new { @class = "nav-link" })</li>
                 </ul>
+                <div class="dropdown-divider"></div>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
