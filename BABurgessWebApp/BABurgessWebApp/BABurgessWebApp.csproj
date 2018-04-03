@@ -461,24 +461,6 @@
     <Content Include="webfonts\fa-brands-400.woff" />
     <Content Include="webfonts\fa-brands-400.ttf" />
     <Content Include="webfonts\fa-brands-400.eot" />
-    <Content Include="webfonts\Gotham\gotham-black.otf" />
-    <Content Include="webfonts\Gotham\gotham-bold.otf" />
-    <Content Include="webfonts\Gotham\gotham-bookitalic.otf" />
-    <Content Include="webfonts\Gotham\gotham-light.otf" />
-    <Content Include="webfonts\Gotham\gotham-thin.otf" />
-    <Content Include="webfonts\Gotham\gotham-thinitalic.otf" />
-    <Content Include="webfonts\Gotham\gotham-ultraitalic.otf" />
-    <Content Include="webfonts\Gotham\gotham-xlight.otf" />
-    <Content Include="webfonts\Gotham\gotham-xlightitalic.otf" />
-    <Content Include="webfonts\Gotham\gothambold.ttf" />
-    <Content Include="webfonts\Gotham\gothambolditalic.ttf" />
-    <Content Include="webfonts\Gotham\gothambook.ttf" />
-    <Content Include="webfonts\Gotham\gothambookitalic.ttf" />
-    <Content Include="webfonts\Gotham\gothamlight.ttf" />
-    <Content Include="webfonts\Gotham\gothamlightitalic.ttf" />
-    <Content Include="webfonts\Gotham\gothammedium.ttf" />
-    <Content Include="webfonts\Gotham\gothammediumitalic.ttf" />
-    <Content Include="webfonts\Gotham\gothammedium_1.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
