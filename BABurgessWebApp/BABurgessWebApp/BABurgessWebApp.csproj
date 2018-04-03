@@ -461,7 +461,6 @@
     <Content Include="webfonts\fa-brands-400.woff" />
     <Content Include="webfonts\fa-brands-400.ttf" />
     <Content Include="webfonts\fa-brands-400.eot" />
-    <Content Include="webfonts\Benguiat-Bold.ttf" />
     <Content Include="webfonts\Gotham\gotham-black.otf" />
     <Content Include="webfonts\Gotham\gotham-bold.otf" />
     <Content Include="webfonts\Gotham\gotham-bookitalic.otf" />
