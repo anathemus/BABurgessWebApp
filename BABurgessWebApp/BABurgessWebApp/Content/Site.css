@@ -198,11 +198,6 @@ ol li
     vertical-align: -5%;
 }
 
-.status:not(.hs)
-{
-    vertical-align: -75%;
-}
-
 .faded
 {
     opacity: 0.70;
