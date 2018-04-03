@@ -1,4 +1,25 @@
-﻿body {
+﻿@font-face
+{
+    font-family: 'Benguiat Bold';
+    src: url('Fonts/Benguiat-Bold.ttf');
+}
+
+
+@font-face
+{
+    font-family: 'Perfect DOS VGA';
+    src: url('Fonts/Perfect DOS VGA 437 Win.ttf');
+}
+
+@font-face
+{
+    font-family: 'Deutsch Gothic';
+    src: url('Fonts/Deutsch.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
