@@ -22,3 +22,13 @@
 {
     font-family: 'Perfect DOS VGA';
 }
+
+.financial-content::after
+{
+    background-image: url('Photos/lamborghini-countach-hd-wallpaper.jpg');    
+}
+
+.financial-table
+{
+    background-color: rgba(255,255,255,0.6);
+}

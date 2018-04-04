@@ -54,15 +54,15 @@ namespace BABurgessWebApp
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "cf749d37ed545ae6cd29ef611a83333b",
+               appSecret: "b79c80bc92e050ccd4c5642ec45c41ee");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "953871450148-1fnnuor3qiecnuaorbkd8ljiu9kqnnlb.apps.googleusercontent.com",
+                ClientSecret = "LmMMOMp6P1Rw5XUsrv2L2MYV"
+            });
         }
     }
 }

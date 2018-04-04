@@ -17,6 +17,13 @@
     src: url('Fonts/Deutsch.ttf');
 }
 
+@font-face
+{
+    font-family: 'Dollar Bill';
+    src: url('Fonts/Dollar Bill.otf');
+    src: url('Fonts/Dollar Bill.ttf');
+}
+
 body {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -252,4 +259,9 @@ fieldset > div > label
 .padded-btn
 {
     padding-top: 5px;
+}
+
+.financial-header
+{
+    font-family: 'Dollar Bill';
 }

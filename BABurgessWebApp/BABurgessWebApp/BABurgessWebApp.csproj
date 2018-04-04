@@ -266,6 +266,7 @@
     <Content Include="Content\Photos\js1_0.png" />
     <Content Include="Content\Photos\kingkong3.png" />
     <Content Include="Content\Photos\lair.gif" />
+    <Content Include="Content\Photos\lamborghini-countach-hd-wallpaper.jpg" />
     <Content Include="Content\Photos\LaunchCode_Logo.png" />
     <Content Include="Content\Photos\logo.gif" />
     <Content Include="Content\Photos\logo.png" />
@@ -349,6 +350,8 @@
     <Content Include="Content\Fonts\Benguiat-Bold.ttf" />
     <Content Include="Content\Fonts\Perfect DOS VGA 437 Win.ttf" />
     <Content Include="Content\Fonts\Deutsch.ttf" />
+    <Content Include="Content\Fonts\Dollar Bill.otf" />
+    <Content Include="Content\Fonts\Dollar Bill.ttf" />
     <None Include="Properties\PublishProfiles\benjaminaburgess - Web Deploy.pubxml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -461,6 +464,7 @@
     <Content Include="webfonts\fa-brands-400.woff" />
     <Content Include="webfonts\fa-brands-400.ttf" />
     <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="Views\Account\PrivacyPolicy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
