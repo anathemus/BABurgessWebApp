@@ -71,5 +71,12 @@ namespace BBWebApplication.Controllers
             }
             return View();
         }
+
+        public ActionResult PrivacyPolicy()
+        {
+            ViewBag.Message = "Privacy Policy";
+
+            return View();
+        }
     }
 }
