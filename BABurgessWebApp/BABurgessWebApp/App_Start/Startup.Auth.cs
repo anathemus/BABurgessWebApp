@@ -55,8 +55,8 @@ namespace BABurgessWebApp
             //   consumerSecret: "");
 
             app.UseFacebookAuthentication(
-               appId: "cf749d37ed545ae6cd29ef611a83333b",
-               appSecret: "b79c80bc92e050ccd4c5642ec45c41ee");
+               appId: "638852886506500",
+               appSecret: "06a59957914aae3a9365742cae4949d8");
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
