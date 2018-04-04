@@ -54,9 +54,11 @@ namespace BABurgessWebApp
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            app.UseFacebookAuthentication(
+            // Disabling Facebook Auth until issues resolved
+            /*app.UseFacebookAuthentication(
                appId: "638852886506500",
                appSecret: "06a59957914aae3a9365742cae4949d8");
+               */
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
