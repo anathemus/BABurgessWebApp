@@ -7,9 +7,11 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BABurgessWebApp.Models;
+using System.Web.Mvc.Filters;
 
 namespace BABurgessWebApp.Controllers
 {
+    [Authorize]
     public class FinancialController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -125,4 +127,5 @@ namespace BABurgessWebApp.Controllers
             base.Dispose(disposing);
         }
     }
+
 }
