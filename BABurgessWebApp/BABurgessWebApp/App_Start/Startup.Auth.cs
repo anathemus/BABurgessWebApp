@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
+using Owin.Security.Providers.GooglePlus;
 using Owin;
 using BABurgessWebApp.Models;
 using Google.Apis.Auth.OAuth2;
@@ -61,11 +62,33 @@ namespace BABurgessWebApp
                appSecret: "06a59957914aae3a9365742cae4949d8");
                */
             
-            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            //app.UseGoogleAuthentication();
+
+            var googlePlusOptions = new GooglePlusAuthenticationOptions
             {
                 ClientId = "953871450148-1fnnuor3qiecnuaorbkd8ljiu9kqnnlb.apps.googleusercontent.com",
-                ClientSecret = "LmMMOMp6P1Rw5XUsrv2L2MYV"
-            });
+                ClientSecret = "LmMMOMp6P1Rw5XUsrv2L2MYV",
+                SignInAsAuthenticationType = DefaultAuthenticationTypes.ExternalCookie,
+                Provider = new Owin.Security.Providers.GooglePlus.Provider.GooglePlusAuthenticationProvider()
+                {
+                    OnAuthenticated = (context) =>
+                    {
+                        context.Identity.AddClaim(new System.Security.Claims.Claim("urn:googleplus:accesstoken", context.AccessToken, System.Security.Claims.ClaimValueTypes.String, "Facebook"));
+                        foreach (var x in context.User)
+                        {
+                            var claimType = string.Format("urn:googleplus:{0}", x.Key);
+                            string claimValue = x.Value.ToString();
+                            if (!context.Identity.HasClaim(claimType, claimValue))
+                                context.Identity.AddClaim(new System.Security.Claims.Claim(claimType, claimValue, System.Security.Claims.ClaimValueTypes.String, "Facebook"));
+
+                        }
+                        return System.Threading.Tasks.Task.FromResult(0);
+                    }
+                },
+            };
+
+            googlePlusOptions.Scope.Add("email");
+            app.UseGooglePlusAuthentication(googlePlusOptions);
         }
     }
 }

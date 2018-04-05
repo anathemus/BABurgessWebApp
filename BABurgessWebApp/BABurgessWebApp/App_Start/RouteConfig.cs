@@ -25,12 +25,6 @@ namespace BABurgessWebApp
                 defaults: new { controller = "Financial", action = "Index", id = UrlParameter.Optional }
                 );
 
-            routes.MapRoute(
-                name: "signin-google",
-                url: "signin-google",
-                defaults: new { controller = "Account", action = "ExternalLoginCallback" }
-            );
-
         }
     }
 }
