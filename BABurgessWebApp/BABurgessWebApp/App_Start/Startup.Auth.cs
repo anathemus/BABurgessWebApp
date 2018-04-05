@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using BABurgessWebApp.Models;
+using Google.Apis.Auth.OAuth2;
 
 namespace BABurgessWebApp
 {
@@ -59,7 +60,7 @@ namespace BABurgessWebApp
                appId: "638852886506500",
                appSecret: "06a59957914aae3a9365742cae4949d8");
                */
-
+            
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
                 ClientId = "953871450148-1fnnuor3qiecnuaorbkd8ljiu9kqnnlb.apps.googleusercontent.com",
