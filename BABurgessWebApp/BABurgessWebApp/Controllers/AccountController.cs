@@ -12,6 +12,7 @@ using BABurgessWebApp.Models;
 
 namespace BABurgessWebApp.Controllers
 {
+    [RequireHttps]
     [Authorize]
     public class AccountController : Controller
     {

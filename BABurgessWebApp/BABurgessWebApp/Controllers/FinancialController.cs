@@ -10,6 +10,8 @@ using BABurgessWebApp.Models;
 
 namespace BABurgessWebApp.Controllers
 {
+    [RequireHttps]
+    [Authorize]
     public class FinancialController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
