@@ -424,6 +424,12 @@ namespace BABurgessWebApp.Controllers
             base.Dispose(disposing);
         }
 
+        [AllowAnonymous]
+        public ActionResult GoogleLogin()
+        {
+            return View(); 
+        }
+
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";

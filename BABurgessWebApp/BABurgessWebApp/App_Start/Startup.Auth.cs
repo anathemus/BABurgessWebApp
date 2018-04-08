@@ -4,8 +4,10 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
+using Microsoft.Owin.Security.OAuth;
 using Owin;
 using BABurgessWebApp.Models;
+using System.Threading.Tasks;
 
 namespace BABurgessWebApp
 {
@@ -53,16 +55,35 @@ namespace BABurgessWebApp
             //app.UseTwitterAuthentication(
             //   consumerKey: "",
             //   consumerSecret: "");
+            // new 3.1.0 format for Facebook
+            /*app.UseFacebookAuthentication(new FacebookAuthenticationOptions
+            {
+                AppId = "638852886506500",
+                AppSecret = "06a59957914aae3a9365742cae4949d8",
+                Scope = { "email" },
+                Provider = new FacebookAuthenticationProvider
+                {
+                    OnAuthenticated = context =>
+                    {
+                        context.Identity.AddClaim(new System.Security.Claims.Claim("FacebookAccessToken", context.AccessToken));
+                        return Task.FromResult(true);
+                    }
+                }
+            });*/
 
-            app.UseFacebookAuthentication(
-               appId: "638852886506500",
-               appSecret: "06a59957914aae3a9365742cae4949d8");
+            /*app.UseFacebookAuthentication(new FacebookAuthenticationOptions()
+            {
+               AppId = "638852886506500",
+               AppSecret = "06a59957914aae3a9365742cae4949d8"
+            });
+            */
 
-            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            /*app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
                 ClientId = "953871450148-1fnnuor3qiecnuaorbkd8ljiu9kqnnlb.apps.googleusercontent.com",
                 ClientSecret = "LmMMOMp6P1Rw5XUsrv2L2MYV"
             });
+            */
         }
     }
 }
