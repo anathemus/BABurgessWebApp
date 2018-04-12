@@ -8,6 +8,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using BABurgessWebApp.Models;
 using System.Threading.Tasks;
+using BABurgessWebApp.Logins;
 
 namespace BABurgessWebApp
 {
@@ -19,7 +20,9 @@ namespace BABurgessWebApp
             // Configure the db context, user manager and signin manager to use a single instance per request
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
+ 
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
+
 
             // Enable the application to use a cookie to store information for the signed in user
             // and to use a cookie to temporarily store information about a user logging in with a third party login provider
@@ -78,12 +81,17 @@ namespace BABurgessWebApp
             });
             */
 
-            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            /*app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
                 ClientId = "953871450148-1fnnuor3qiecnuaorbkd8ljiu9kqnnlb.apps.googleusercontent.com",
                 ClientSecret = "LmMMOMp6P1Rw5XUsrv2L2MYV"
             });
-           
+           */
+            app.UseBABGoogleAuthentication(new BABGoogleAuthenticationOptions()
+            {
+                ClientId = "953871450148-1fnnuor3qiecnuaorbkd8ljiu9kqnnlb.apps.googleusercontent.com",
+                ClientSecret = "LmMMOMp6P1Rw5XUsrv2L2MYV"
+            });
         }
     }
 }
