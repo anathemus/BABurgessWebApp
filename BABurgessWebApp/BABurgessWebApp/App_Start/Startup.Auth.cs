@@ -78,12 +78,12 @@ namespace BABurgessWebApp
             });
             */
 
-            /*app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
                 ClientId = "953871450148-1fnnuor3qiecnuaorbkd8ljiu9kqnnlb.apps.googleusercontent.com",
                 ClientSecret = "LmMMOMp6P1Rw5XUsrv2L2MYV"
             });
-            */
+           
         }
     }
 }
